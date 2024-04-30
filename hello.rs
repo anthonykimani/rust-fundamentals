@@ -1,5 +1,10 @@
 use std::mem;
 
+fn analyse_slice(slice: &[u32; 5]){
+    println!("The first element is {}", slice[0]);
+    println!("The Last element is {}", slice.len());
+}
+
 fn main() {
     let x: i16 = 130; //i32 is an integer type
     let _y: i32;
@@ -24,8 +29,10 @@ fn main() {
     println!("{:?}", _xs[2]);
 
     // Arrays are stack allocated.
-    println!("Array occupies {} bytes", mem::size_of_val(_xs));
+    println!("Array occupies {} bytes", mem::size_of_val(&_xs));
 
     //print number of element in Array
     println!("{:?}", _xs.len());
+
+    analyse_slice(&_xs);
 }
