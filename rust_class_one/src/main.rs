@@ -1,16 +1,16 @@
 fn main() {
     // signed integers in rust
     let number1: i8 = 10;
-    let number2: i16 = -20;
-    let number3: i32 = 30;
-    let number4: i64 =  -40;
-    let number5: i128 = 50;
+    let _number2: i16 = -20;
+    let _number3: i32 = 30;
+    let _number4: i64 =  -40;
+    let _number5: i128 = 50;
     println!("The number is {}", number1);
 
     // unsigned integers in rust
     let unsigned_int: u8 = 10;
-    let unsigned_int_2: u16 = 200;
-    let unsigned_int_3: u32 = 3000;
+    let _unsigned_int_2: u16 = 200;
+    let _unsigned_int_3: u32 = 3000;
     println!("The unsigned_int is {}", unsigned_int);
 
     // characters in rust
@@ -18,7 +18,7 @@ fn main() {
     println!("An example of a Testube emoji is {}", character_one);
 
     // floats in rust
-    let float_one: f32 = 0.032;
+    let _float_one: f32 = 0.032;
 
 
 
@@ -28,8 +28,13 @@ fn main() {
     println!("The Teacher said {}", my_age );
 
     // 2. String
-    // let text_1: String = String::new("Hello");
-    // println!("The Boy said {}", text_1);
+    let mut text_1: String = String::new();
+    text_1.push_str("Wolf");
+    println!("The Boy cried {}", text_1);
+
+    let text_2: String = String::from("Rust");
+    println!("We are learning {} for Blockchain Development", text_2);
+    
 
     sum(3,5);
 
