@@ -1,7 +1,7 @@
 fn main() {
-    // while_loop();
-    // for_in_loop();
-    // print_even_num();
+    while_loop();
+    for_in_loop();
+    print_even_num();
     less_than_greater_than();
 }
 
