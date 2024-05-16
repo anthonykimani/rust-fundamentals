@@ -1,0 +1,1 @@
+/mnt/c/Users/kiman/Development/web3clubs/rust-fundamentals/rust_week_2_assignment/target/debug/rust_week_2_assignment: /mnt/c/Users/kiman/Development/web3clubs/rust-fundamentals/rust_week_2_assignment/src/main.rs
