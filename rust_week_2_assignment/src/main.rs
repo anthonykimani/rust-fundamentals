@@ -7,7 +7,7 @@ fn main() {
 }
 
 fn reverse_with_range_operator() {
-    for i in (0..50).rev() {
+    for i in (0..=50).rev() {
         println!("{}", i);
     }
 }
@@ -18,13 +18,13 @@ fn print_to_input() {
     let n = io::stdin().read_line(&mut input).expect("Failed to read line");
     let number = input.trim().parse().expect("Please enter a number");
 
-    for i in 0..number {
+    for i in 0..=number {
         println!("{}", i);
     }
 
     let mut i: i32 = 0;
 
-    while i < number {
+    while i <= number {
         println!("{}", i);
         i += 1;
     }
