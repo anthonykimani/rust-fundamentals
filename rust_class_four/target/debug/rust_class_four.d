@@ -1,0 +1,1 @@
+/mnt/c/Users/kiman/Development/web3clubs/rust-fundamentals/rust_class_four/target/debug/rust_class_four: /mnt/c/Users/kiman/Development/web3clubs/rust-fundamentals/rust_class_four/src/divider/divide.rs /mnt/c/Users/kiman/Development/web3clubs/rust-fundamentals/rust_class_four/src/divider/mod.rs /mnt/c/Users/kiman/Development/web3clubs/rust-fundamentals/rust_class_four/src/main.rs
