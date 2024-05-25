@@ -1,5 +1,5 @@
 fn main() {
-    let a = 816;
+    let a = 2000;
     let b = 4115;
     let result = gcd(a, b);
     println!("The GCD of {a} and {b} is: {}", result);
