@@ -1,5 +1,5 @@
 pub fn static_array() {
-    let rainbow:[&str; 7] = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet", "Violet"];
+    let rainbow:[&str; 8] = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet", "Violet"];
     for i in rainbow {
         println!("{} is a color visible on rainbows", i);
     }

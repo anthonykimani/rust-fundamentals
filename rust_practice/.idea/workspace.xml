@@ -8,8 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="847d6e21-8e6a-4b84-99eb-dcdaccc116d7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../rust_class_1/.idea/rust_class_1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../rust_class_1/.idea/rust_class_1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rust_class_1/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../rust_class_1/Cargo.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/arrays/array.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/arrays/array.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/.rustc_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/.rustc_info.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +31,9 @@
   <component name="MacroExpansionManager">
     <option name="directoryName" value="71xotvxz" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2gwTwFJtOnYwoycl5ONMXZcfSI0" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -45,6 +47,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.rust.reset.selective.auto.import": "true",
+    "last_opened_file_path": "C:/Users/kiman/Development/web3clubs/rust-fundamentals/rust_practice",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -100,6 +103,7 @@
       <option name="presentableId" value="Default" />
       <updated>1716607876582</updated>
       <workItem from="1716607877694" duration="4405000" />
+      <workItem from="1719647333444" duration="4217000" />
     </task>
     <servers />
   </component>
