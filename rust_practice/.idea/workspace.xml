@@ -9,9 +9,33 @@
   <component name="ChangeListManager">
     <list default="true" id="847d6e21-8e6a-4b84-99eb-dcdaccc116d7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/arrays/array.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/arrays/array.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/.rustc_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/.rustc_info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/.fingerprint/rust_practice-d8b03b87e09c645c/dep-bin-rust_practice" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/.fingerprint/rust_practice-d8b03b87e09c645c/dep-bin-rust_practice" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/.fingerprint/rust_practice-d8b03b87e09c645c/output-bin-rust_practice" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/.fingerprint/rust_practice-d8b03b87e09c645c/output-bin-rust_practice" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/deps/rust_practice-d8b03b87e09c645c" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/deps/rust_practice-d8b03b87e09c645c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/deps/rust_practice-d8b03b87e09c645c.d" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/deps/rust_practice-d8b03b87e09c645c.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkc5ej5f7-1x7qqfc-tj4gjcana4olq84nyu14e3vg/162i50d79vtvd9iw.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkc5ej5f7-1x7qqfc-tj4gjcana4olq84nyu14e3vg/1775h9ns2iii0d84.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkc5ej5f7-1x7qqfc-tj4gjcana4olq84nyu14e3vg/1u6ut5jcwwfvokl0.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkc5ej5f7-1x7qqfc-tj4gjcana4olq84nyu14e3vg/2h1a1ux1zxwk52nk.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkc5ej5f7-1x7qqfc-tj4gjcana4olq84nyu14e3vg/3854dfte0a6wfzz4.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkc5ej5f7-1x7qqfc-tj4gjcana4olq84nyu14e3vg/3rqqhr80glql0fkw.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkc5ej5f7-1x7qqfc-tj4gjcana4olq84nyu14e3vg/49nvxznz0mhcqvo1.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkc5ej5f7-1x7qqfc-tj4gjcana4olq84nyu14e3vg/4bdrrbu28era4pdp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkc5ej5f7-1x7qqfc-tj4gjcana4olq84nyu14e3vg/4xmjsjnszl77th5o.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkc5ej5f7-1x7qqfc-tj4gjcana4olq84nyu14e3vg/568hgrlbuquo0pww.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkc5ej5f7-1x7qqfc-tj4gjcana4olq84nyu14e3vg/5eg0chhbsrkxtfca.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkc5ej5f7-1x7qqfc-tj4gjcana4olq84nyu14e3vg/5gcd2gkimhes29t5.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkc5ej5f7-1x7qqfc-tj4gjcana4olq84nyu14e3vg/beo991yide4o53w.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkc5ej5f7-1x7qqfc-tj4gjcana4olq84nyu14e3vg/blajg952rdrj0wo.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkc5ej5f7-1x7qqfc-tj4gjcana4olq84nyu14e3vg/ci7vo5j8660pxzo.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkc5ej5f7-1x7qqfc-tj4gjcana4olq84nyu14e3vg/dep-graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkc5ej5f7-1x7qqfc-tj4gjcana4olq84nyu14e3vg/query-cache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkc5ej5f7-1x7qqfc-tj4gjcana4olq84nyu14e3vg/u7nu0dsx6mwkg9t.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkc5ej5f7-1x7qqfc-tj4gjcana4olq84nyu14e3vg/work-products.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkc5ej5f7-1x7qqfc.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/rust_practice" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/rust_practice" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/rust_practice.d" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/rust_practice.d" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +127,7 @@
       <option name="presentableId" value="Default" />
       <updated>1716607876582</updated>
       <workItem from="1716607877694" duration="4405000" />
-      <workItem from="1719647333444" duration="4217000" />
+      <workItem from="1719647333444" duration="5532000" />
     </task>
     <servers />
   </component>
