@@ -13,6 +13,7 @@ impl User {
         println!("user {} is eating", &self.name);
     }
 }
+
 pub fn struct_func() {
     let anto = User{
         name: String::from("Anto"),

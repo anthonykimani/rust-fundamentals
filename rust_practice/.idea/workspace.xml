@@ -10,38 +10,7 @@
     <list default="true" id="847d6e21-8e6a-4b84-99eb-dcdaccc116d7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/.fingerprint/rust_practice-d8b03b87e09c645c/dep-bin-rust_practice" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/.fingerprint/rust_practice-d8b03b87e09c645c/dep-bin-rust_practice" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/.fingerprint/rust_practice-d8b03b87e09c645c/output-bin-rust_practice" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/.fingerprint/rust_practice-d8b03b87e09c645c/output-bin-rust_practice" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/deps/rust_practice-d8b03b87e09c645c" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/deps/rust_practice-d8b03b87e09c645c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/deps/rust_practice-d8b03b87e09c645c.d" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/deps/rust_practice-d8b03b87e09c645c.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/1u6ut5jcwwfvokl0.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/24mplr6fu3795g47.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/2eb3nrkbuvigbx9t.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/2ej29t8k4pqbzsta.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/2hidbjdrl208075u.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/2knnffcavx4as8gl.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/2ruja220qw3zg2qj.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/30jh5pcxa0y6fom8.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/3854dfte0a6wfzz4.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/3hrqjqry0kv8qcct.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/3rqqhr80glql0fkw.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/44yur770pvvnozdw.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/4bdrrbu28era4pdp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/4cqgdxjh0wokr38m.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/4xmjsjnszl77th5o.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/568hgrlbuquo0pww.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/5eg0chhbsrkxtfca.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/a2ri86ygnyesmfe.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/beo991yide4o53w.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/ci7vo5j8660pxzo.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/dep-graph.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/mpsiicpwz4gijm1.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/query-cache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/u7nu0dsx6mwkg9t.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i-41svjkxv11fg3930urw5dt94y/work-products.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/incremental/rust_practice-3ntuwy0pgznup/s-gxkdn0f98p-tlrc8i.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/rust_practice" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/rust_practice" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/debug/rust_practice.d" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/rust_practice.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/.rustc_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/.rustc_info.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,19 +41,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.rust.reset.selective.auto.import": "true",
-    "last_opened_file_path": "C:/Users/kiman/Development/web3clubs/rust-fundamentals/rust_practice",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
-    "org.rust.first.attach.projects": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kiman/Development/web3clubs/rust-fundamentals/rust_practice&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
+    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Cargo.Run rust_practice">
     <configuration name="Run rust_practice" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run --package rust_practice --bin rust_practice" />
@@ -133,7 +102,8 @@
       <option name="presentableId" value="Default" />
       <updated>1716607876582</updated>
       <workItem from="1716607877694" duration="4405000" />
-      <workItem from="1719647333444" duration="27210000" />
+      <workItem from="1719647333444" duration="35043000" />
+      <workItem from="1720018033487" duration="1254000" />
     </task>
     <servers />
   </component>
