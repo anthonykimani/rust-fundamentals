@@ -9,7 +9,7 @@ pub fn sync_main(){
     for _i in 0..10{
         let tx_clone = tx.clone();
         thread::spawn(move||{
-            tx_clone.send(format!("loop number {}", _i));
+            tx_clone.send(format!("loop number {_i}"));
             thread::sleep(Duration::from_millis(10));
         });
     }
