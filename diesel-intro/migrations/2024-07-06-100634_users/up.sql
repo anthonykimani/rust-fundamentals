@@ -6,5 +6,6 @@ CREATE TABLE users (
     name VARCHAR NOT NULL,
     firstname character varying(150) NOT NULL,
     age INTEGER NOT NULL,
-    email VARCHAR NOT NULL
+    email VARCHAR NOT NULL,
+    password VARCHAR NOT NULL
 )

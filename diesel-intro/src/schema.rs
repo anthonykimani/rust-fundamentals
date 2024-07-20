@@ -28,6 +28,7 @@ diesel::table! {
         firstname -> Varchar,
         age -> Int4,
         email -> Varchar,
+        password -> Varchar,
     }
 }
 
