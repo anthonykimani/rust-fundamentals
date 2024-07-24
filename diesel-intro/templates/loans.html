@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loans</title>
+</head>
+<body>
+<h1>Secure a Loan Today!</h1>
+{% if let Some(error_message) = error %}
+<p class="error">{{ error_message }}</p>
+{% endif %}
+
+<form action="/loan/create" method="post">
+    <label for="loan-type">Loan Type:</label><br>
+    <input type="text" id="loan-type" name="loan_type"><br><br>
+
+    <label for="amount">Amount:</label><br>
+    <input type="number" id="amount" name="amount"><br><br>
+
+    <label for="interest-rate">Interest Rate:</label><br>
+    <input type="text" id="interest-rate" name="interest_rate"><br><br>
+
+    <label for="term-length">Term Length:</label><br>
+    <input type="number" id="term-length" name="term_length"><br><br>
+
+    <button type="submit">Create Loan</button>
+
+</form>
+</body>
+</html>

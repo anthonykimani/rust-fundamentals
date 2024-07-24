@@ -1,6 +1,5 @@
 use actix_session::Session;
-use actix_web::{web, App, HttpServer, Responder, HttpResponse, HttpRequest};
-use actix_web::web::Redirect;
+use actix_web::{web, Responder, HttpResponse, HttpRequest};
 use crate::models::users::{NewUsers, Users, LoginForm, RegisterForm};
 use crate::db_operations::users::{add_user, get_a_user_by_id, get_a_user_by_mail};
 use crate::models::app_state::AppState;
@@ -8,6 +7,13 @@ use crate::models::ui::{LoginTemplate, DashboardTemplate, RegisterTemplate};
 use bcrypt::{hash, DEFAULT_COST, verify};
 use askama::Template;
 use log::{error, info, debug};
+
+
+#[derive(serde::Deserialize)]
+struct CookieModel {
+    message: String
+}
+
 
 async fn handle_register_error(error: &str) -> HttpResponse {
     let template = RegisterTemplate { error: Some(error.to_string()) };
@@ -97,10 +103,11 @@ pub async fn login_user(form: web::Form<LoginForm>, state: web::Data<AppState>, 
     match user_exist {
         Some(user) => {
             if verify(&form.password, &user.password).unwrap_or(false) {
-                session.insert("user_id", form.email.clone())?;
-                // Redirect to the dashboard route
+                session.insert("user_id", user.id)?;
+                println!("user id:{:?}",user.id);
+                // Redirect to the loans route
                 Ok(HttpResponse::Found()
-                    .append_header((actix_web::http::header::LOCATION, "/dashboard"))
+                    .append_header((actix_web::http::header::LOCATION, "/loan"))
                     .finish())
             } else {
                 let error_message = "Wrong password.".to_string();
@@ -122,7 +129,7 @@ pub async fn login_user(form: web::Form<LoginForm>, state: web::Data<AppState>, 
 
 pub async fn register_user(item: web::Form<RegisterForm>, state: web::Data<AppState>) -> HttpResponse {
     println!("Data is {:#?}", item);
-    if item.name.is_empty() || item.email.is_empty() || item.bio.is_empty() || item.password.is_empty() {
+    if item.name.is_empty() || item.email.is_empty() || item.password.is_empty() {
         println!("Empty fields detected");
         return handle_register_error("All fields are required").await;
     }
@@ -140,7 +147,6 @@ pub async fn register_user(item: web::Form<RegisterForm>, state: web::Data<AppSt
 
     let new_user = NewUsers {
         name: item.name.clone(),
-        firstname: "".to_string(),
         age: 0,
         email: item.email.clone(),
         password: hashed_password,

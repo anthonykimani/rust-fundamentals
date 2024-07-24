@@ -23,3 +23,10 @@ pub struct DashboardTemplate {
 #[derive(Template)]
 #[template(path = "index.html")]
 pub struct IndexTemplate;
+
+#[derive(Template)]
+#[template(path = "loans.html")]
+pub struct LoanTemplate{
+    pub(crate) error: Option<String>,
+    pub(crate) message: Option<String>
+}

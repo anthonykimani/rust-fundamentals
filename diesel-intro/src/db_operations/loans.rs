@@ -1,18 +1,17 @@
-
-use crate::models::users::{NewUsers, Users};
 use diesel::prelude::*;
+use crate::models::loans::{Loan, NewLoan};
 
-pub fn get_all_users(connection: &mut PgConnection) -> Vec<Users> {
-    use crate::schema::users::dsl::*;
+pub fn get_all_loans(connection: &mut PgConnection) -> Vec<Loan> {
+    use crate::schema::loans::dsl::*;
 
-    let mut all_posts: Vec<Users> = Vec::new();
-    let results = users
-        .select(Users::as_select())
+    let mut all_loans: Vec<Loan> = Vec::new();
+    let results = loans
+        .select(Loan::as_select())
         .load(connection);
     match results {
         Ok(data) => {
-            for post in data.into_iter() {
-                all_posts.push(post)
+            for loan in data.into_iter() {
+                all_loans.push(loan)
             }
 
             println!("todo")
@@ -20,30 +19,17 @@ pub fn get_all_users(connection: &mut PgConnection) -> Vec<Users> {
         Err(e) => println!("Error occured {:?}", e)
     }
 
-    return all_posts;
+    return all_loans;
 }
 
-pub fn get_a_user_by_mail(connection: &mut PgConnection, user_email: String) -> Option<Users> {
-    use crate::schema::users::dsl::*;
+pub fn get_loan_by_id(connection: &mut PgConnection, loan_id: i32) -> Option<Loan> {
+    use crate::schema::loans::dsl::*;
 
 
-    users
-        .filter(email.eq(user_email))
-        .first::<Users>(connection)
-        .optional() // This will convert the result to Option
-        .unwrap_or_else(|err| {
-            println!("Error occurred: {:?}", err);
-            None
-        })
-}
-
-pub fn get_a_user_by_id(connection: &mut PgConnection, user_id: i32) -> Option<Users> {
-    use crate::schema::users::dsl::*;
-
-
-    users
-        .filter(id.eq(user_id))
-        .first::<Users>(connection)
+    loans
+        .filter(id.eq(loan_id))
+        .select(Loan::as_select())
+        .first::<Loan>(connection)
         .optional() // This will convert the result to Option
         .unwrap_or_else(|err| {
             println!("Error occurred: {:?}", err);
@@ -52,9 +38,9 @@ pub fn get_a_user_by_id(connection: &mut PgConnection, user_id: i32) -> Option<U
 }
 
 
-pub fn add_user(new_user: NewUsers, connection: &mut PgConnection) -> Result<Users, diesel::result::Error>{
-    diesel::insert_into(crate::schema::users::table)
-        .values(&new_user)
-        // .returning(Post::as_returning())
-        .get_result::<Users>(connection)
+pub fn add_loan(new_loan: NewLoan, connection: &mut PgConnection) -> Result<Loan, diesel::result::Error>{
+    diesel::insert_into(crate::schema::loans::table)
+        .values(&new_loan)
+        .returning(Loan::as_returning())
+        .get_result::<Loan>(connection)
 }
