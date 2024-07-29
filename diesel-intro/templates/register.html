@@ -1,40 +1,241 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Register</title>
     <style>
-        .error {
-            color: red;
-        }
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono",
+          monospace;
+        /* border: 1px solid red; */
+      }
+
+      /* REUSABLE */
+
+      :root {
+        --dark-navy: #020c1b;
+        --navy: #0a192f;
+        --light-navy: #112240;
+        --lightest-navy: #233554;
+        --navy-shadow: rgba(2, 12, 27, 0.7);
+        --dark-slate: #495670;
+        --slate: #8892b0;
+        --light-slate: #a8b2d1;
+        --lightest-slate: #ccd6f6;
+        --white: #e6f1ff;
+        --green: #64ffda;
+        --green-tint: rgba(100, 255, 218, 0.1);
+        --pink: #f57dff;
+        --blue: #57cbff;
+        --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text",
+          -apple-system, system-ui, sans-serif;
+        --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono",
+          monospace;
+        --font-poppins: "Poppins", sans-serif;
+        --font-display: "ClashDisplay", -apple-system, system-ui, sans-serif;
+        --font-dm: "DM-Sans", sans-serif;
+        --h1-size: 80px;
+      }
+
+      .page-container {
+        background-color: #0a192f;
+        min-height: 100vh;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .navigation-container {
+        position: sticky;
+        display: flex;
+        justify-content: space-between;
+        background-color: #0a192f;
+        padding: 5px 0px;
+        z-index: 400;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+          rgba(0, 0, 0, 0.23) 0px 6px 6px;
+      }
+
+      .navigation-logo {
+        color: #64ffda;
+        padding: 10px;
+      }
+
+      .navigation-bar {
+        max-width: 500px;
+        width: 100%;
+      }
+
+      .navigation-bar ul {
+        display: flex;
+        align-items: center;
+
+        width: 100%;
+      }
+
+      .navigation-bar ul li {
+        padding: 0px 10px;
+        list-style: none;
+      }
+
+      .navigation-bar ul li a {
+        text-decoration: none;
+        color: #a8b2d1;
+        transition: 0.3s ease-in-out;
+      }
+
+      .navigation-bar ul li a:hover {
+        color: #64ffda;
+      }
+
+      .navigation-bar ul li a span {
+        color: #64ffda;
+      }
+
+      .navigation-action {
+        display: flex;
+        align-items: center;
+      }
+
+      .generic-button {
+        border: 1px solid #64ffda;
+        color: #64ffda;
+        background-color: transparent;
+        padding: 10px 20px;
+        border-radius: 0;
+        margin: 5px 0px;
+      }
+
+      .generic-button:hover {
+        background-color: rgba(100, 255, 218, 0.1);
+      }
+
+      .resume-button {
+        margin: 5px 10px;
+        text-decoration: none;
+      }
+
+      .form-container {
+        max-height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      form {
+        max-height: 600px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .input-bar {
+        padding: 10px;
+        border-radius: 4px;
+        border: none;
+        width: 500px;
+      }
+
+      .input-label {
+        color: var(--green);
+        margin-bottom: 10px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <main class="page-container">
+      <section class="navigation-container fixed">
+        <div class="navigation-logo">
+          <!-- <i class="fa-light fa-terminal fa-2xl"></i> -->
+          <!-- <i class='bx bx-terminal bx-lg' ></i> -->
+          <!-- <i class="fa-light fa-code-simple"></i> -->
+          <i class="bx bx-code-alt bx-md"></i>
+          <!-- <i class="fa-light fa-chart-simple"></i> -->
+        </div>
+        <nav class="navigation-bar">
+          <ul>
+            <li>
+              <a href="#"><span>01.</span>Home</a>
+            </li>
+            <li>
+              <a href="#"><span>02.</span>Loans</a>
+            </li>
+            <li>
+              <a href="#"><span>03.</span>About</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="navigation-action">
+          <a class="generic-button resume-button">Login</a>
+          <a class="generic-button resume-button">Signup</a>
+        </div>
+      </section>
+      <section class="form-container">
+        {% if let Some(error_message) = error %}
+        <p class="error">{{ error_message }}</p>
+        {% endif %}
+        <form action="/register" method="post">
+          <label for="name" class="input-label">Name:</label><br />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="input-bar"
+          /><br /><br />
 
-{% if let Some(error_message) = error %}
-<p class="error">{{ error_message }}</p>
-{% endif %}
+          <label for="email" class="input-label">Email:</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="input-bar"
+          /><br /><br />
 
-<form action="/register" method="post">
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name"><br><br>
+          <label for="age" class="input-label">Age:</label><br />
+          <input
+            type="number"
+            id="age"
+            name="age"
+            class="input-bar"
+          /><br /><br />
 
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email"><br><br>
+          <!--<label style="visibility: collapse" for="avatar_url">Bio:</label><br>-->
+          <!--<input style="visibility: collapse" type="hidden" value="" id="avatar_url" name="avatar_url"><br><br>-->
 
-    <label for="age">Age:</label><br>
-    <input type="number" id="age" name="age"><br><br>
-
-    <!--<label style="visibility: collapse" for="avatar_url">Bio:</label><br>-->
-    <!--<input style="visibility: collapse" type="hidden" value="" id="avatar_url" name="avatar_url"><br><br>-->
-
-    <label for="password">Password:</label><br>
-    <input type="password" id="password" name="password"><br><br>
-    <button type="submit">Register</button>
-
-</form>
-</body>
+          <label for="password" class="input-label">Password:</label><br />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="input-bar"
+          /><br /><br />
+          <button type="submit" class="generic-button resume-button">
+            Register
+          </button>
+        </form>
+      </section>
+    </main>
+  </body>
 </html>

@@ -36,6 +36,7 @@ async fn main() -> std::io::Result<()> {
                     // .cookie_content_security(CookieContentSecurity::Private)
                     .build()
             )
+            // .route("/dashboard", web::get().to(dashboard_page))
             .route("/login", web::post().to(login_user))
             .route("/login", web::get().to(login_page))
             .route("/register", web::post().to(register_user))

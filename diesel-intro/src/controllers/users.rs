@@ -107,7 +107,7 @@ pub async fn login_user(form: web::Form<LoginForm>, state: web::Data<AppState>, 
                 println!("user id:{:?}",user.id);
                 // Redirect to the loans route
                 Ok(HttpResponse::Found()
-                    .append_header((actix_web::http::header::LOCATION, "/loan"))
+                    .append_header((actix_web::http::header::LOCATION, "/dashboard"))
                     .finish())
             } else {
                 let error_message = "Wrong password.".to_string();
