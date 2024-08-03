@@ -1,11 +1,13 @@
 use actix_web::{web, Responder, HttpResponse, HttpRequest, error::ErrorUnauthorized,};
 use askama::Template;
 use crate::db_operations::loans::add_loan;
-use crate::models::ui::{LoanTemplate, LoginTemplate};
+use crate::models::ui::{DashboardTemplate, LoanTemplate, LoginTemplate};
 use crate::models::app_state::AppState;
 use crate::models::loans::{CreateLoanForm, Loan, NewLoan};
+use crate::db_operations::users::{add_user, get_a_user_by_id, get_a_user_by_mail};
 use actix_session::Session;
 use chrono::Utc;
+use log::{error, info};
 
 async fn handle_loan_error(error: &str) -> HttpResponse {
     let template = LoanTemplate { error: None, message: Some(error.to_string()) };
@@ -25,9 +27,37 @@ pub async fn create_loan(loan: web::Form<CreateLoanForm>, state: web::Data<AppSt
 
     println!("All fields have content");
 
-    let user_id: Option<i32> = session.get("user_id").unwrap_or(None);
-    println!("user id:{:?}",user_id);
+    // let user_email = session.get::<String>("user_email");
 
+    let mut connection_guard = state.db_connection.lock().unwrap();
+    let result = match session.get::<String>("user_email") {
+        Ok(Some(user_email)) => {
+            info!("user_id found in session: {}", user_email);
+            match get_a_user_by_mail(&mut connection_guard, user_email) {
+                Some(user) => {
+                    let dashboard_template = DashboardTemplate {
+                        email: user.email.to_string(),
+                    };
+                    println!("User found");
+                    Ok(HttpResponse::Ok().content_type("text/html").body(dashboard_template.render().unwrap()))
+                }
+                None => {
+                    println!("User not found");
+                    Ok(HttpResponse::NotFound().append_header((actix_web::http::header::LOCATION, "/login")).finish())
+                }
+            }
+        },
+        Ok(None) => {
+            info!("No user_id found in session");
+            Ok(HttpResponse::Found()
+                .append_header((actix_web::http::header::LOCATION, "/login"))
+                .finish())
+        },
+        Err(e) => {
+            error!("Session error: {:?}", e);
+            Err(actix_web::error::ErrorInternalServerError("Session error"))
+        }
+    };
     let new_loan = NewLoan {
         loan_type: loan.loan_type.clone(),
         amount: loan.amount.clone(),
@@ -37,7 +67,6 @@ pub async fn create_loan(loan: web::Form<CreateLoanForm>, state: web::Data<AppSt
         user_id: 1,
     };
 
-    let mut connection_guard = state.db_connection.lock().unwrap();
     let res = add_loan(new_loan, &mut *connection_guard);
 
     match res {

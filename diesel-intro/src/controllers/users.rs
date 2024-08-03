@@ -40,42 +40,23 @@ pub async fn login_page(error: Option<String>, message: Option<String>) -> impl 
 
 pub async fn dashboard_page(state: web::Data<AppState>, session: Session, req: HttpRequest) -> Result<HttpResponse, actix_web::Error> {
     debug!("Attempting to retrieve user_id from session");
+    let mut connection_guard = state.db_connection.lock().unwrap();
 
-    let result = match session.get::<String>("user_id") {
-        Ok(Some(user_id)) => {
-            info!("user_id found in session: {}", user_id);
-            match user_id.parse::<i32>() {
-                Ok(num) => {
-                    debug!("Converted user_id to number: {}", num);
-                    let mut connection_guard = state.db_connection.lock().map_err(|e| {
-                        error!("Failed to lock database connection: {:?}", e);
-                        actix_web::error::ErrorInternalServerError("Database error")
-                    })?;
-
-                    match get_a_user_by_id(&mut *connection_guard, num) {
-                        Some(user) => {
-                            let dashboard_template = DashboardTemplate {
-                                email: user.email.clone(),
-                            };
-                            Ok(HttpResponse::Ok().content_type("text/html").body(dashboard_template.render().map_err(|e| {
-                                error!("Template rendering error: {:?}", e);
-                                actix_web::error::ErrorInternalServerError("Template error")
-                            })?))
-                        }
-                        None => {
-                            info!("User not found in database");
-                            Ok(HttpResponse::Found()
-                                .append_header((actix_web::http::header::LOCATION, "/login"))
-                                .finish())
-                        }
-                    }
-                },
-                Err(e) => {
-                    error!("Failed to parse user_id: {}", e);
-                    Ok(HttpResponse::Found()
-                        .append_header((actix_web::http::header::LOCATION, "/login"))
-                        .finish())
-                },
+    let result = match session.get::<String>("user_email") {
+        Ok(Some(user_email)) => {
+            info!("user_id found in session: {}", user_email);
+            match get_a_user_by_mail(&mut connection_guard, user_email) {
+                Some(user) => {
+                    let dashboard_template = DashboardTemplate {
+                        email: user.email.to_string(),
+                    };
+                    println!("User found");
+                    Ok(HttpResponse::Ok().content_type("text/html").body(dashboard_template.render().unwrap()))
+                }
+                None => {
+                    println!("User not found");
+                    Ok(HttpResponse::NotFound().append_header((actix_web::http::header::LOCATION, "/login")).finish())
+                }
             }
         },
         Ok(None) => {
@@ -103,8 +84,8 @@ pub async fn login_user(form: web::Form<LoginForm>, state: web::Data<AppState>, 
     match user_exist {
         Some(user) => {
             if verify(&form.password, &user.password).unwrap_or(false) {
-                session.insert("user_id", user.id)?;
-                println!("user id:{:?}",user.id);
+                session.insert("user_email", &form.email)?;
+                println!("user_email:{:?}", &form.email);
                 // Redirect to the loans route
                 Ok(HttpResponse::Found()
                     .append_header((actix_web::http::header::LOCATION, "/dashboard"))
