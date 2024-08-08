@@ -24,6 +24,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
+    <link rel="stylesheet" href="/site/static/style.css">
+    <script src="./static/index.js"></script>
 
     <title>OneLegge Loan App</title>
     <style>
@@ -243,6 +245,42 @@
       }
     </style>
   </head>
+  <script>
+    async function main() {
+      try {
+        const response = await fetch("http://127.0.0.1:7000/available_loans");
+        if(!response.ok){
+          throw new Error(`Response status: ${response.status}`);
+        }
+        const json = await response.json();
+        console.log(json);
+        const loanCard = document.querySelector(".other-project");
+        document.getElementById('other-project-bar').innerHTML = json.map(loan => `
+              <div class="other-project">
+                <div>
+                  <i class="bx bx-money bx-md"></i>
+                  <a
+                    href=""
+                    ><i class='bx bx-credit-card-alt bx-md' ></i></i
+                  ></a>
+                </div>
+                <h2>${loan.loan_type}</h2>
+                <h4>${loan.description}</h4>
+                <ul>
+                  <li>${loan.interest_rate} interest</li>
+                  <li>${loan.term_length} months repayment</li>
+                  <li>${loan.loan_type}</li>
+                </ul>
+              </div>
+    `).join('')
+      } catch (error) {
+        console.error(error.message);
+      }
+
+    }
+
+    main();
+  </script>
   <body>
     <main class="page-container">
       <section class="navigation-container fixed">
@@ -256,7 +294,7 @@
         <nav class="navigation-bar">
           <ul>
             <li>
-              <a href="#"><span>01.</span>Home</a>
+              <a href="/"><span>01.</span>Home</a>
             </li>
             <li>
               <a href="#"><span>02.</span>Loans</a>
@@ -267,63 +305,16 @@
           </ul>
         </nav>
         <div class="navigation-action">
-          <a class="generic-button resume-button">Login</a>
-          <a class="generic-button resume-button">Signup</a>
+          <a href="/login" class="generic-button resume-button">Login</a>
+          <a href="/register" class="generic-button resume-button">Signup</a>
         </div>
       </section>
       <section class="home-container">
           <section class="other-project-container">
             <h2>Create an Account to Apply for a Loan</h2>
             <h4>view available Loans</h4>
-            <div class="other-project-bar">
-              <div class="other-project">
-                <div>
-                  <i class="bx bx-money bx-md"></i>
-                  <a
-                    href=""
-                    ><i class='bx bx-credit-card-alt bx-md' ></i></i
-                  ></a>
-                </div>
-                <h2>Lipa Helb Loan</h2>
-                <h4>This is a student loans to ofset</h4>
-                <ul>
-                  <li>10% interest</li>
-                  <li>9 months repayment</li>
-                  <li>Student Loan</li>
-                </ul>
-              </div>
-              <div class="other-project">
-                <div>
-                  <i class="bx bx-money bx-md"></i>
-                  <a
-                    href=""
-                    ><i class='bx bx-credit-card-alt bx-md' ></i></i
-                  ></a>
-                </div>
-                <h2>Lipa Helb Loan</h2>
-                <h4>This is a student loans to ofset</h4>
-                <ul>
-                  <li>10% interest</li>
-                  <li>9 months repayment</li>
-                  <li>Student Loan</li>
-                </ul>
-              </div>
-              <div class="other-project">
-                <div>
-                  <i class="bx bx-money bx-md"></i>
-                  <a
-                    href=""
-                    ><i class='bx bx-credit-card-alt bx-md' ></i></i
-                  ></a>
-                </div>
-                <h2>Lipa Helb Loan</h2>
-                <h4>This is a student loans to ofset</h4>
-                <ul>
-                  <li>10% interest</li>
-                  <li>9 months repayment</li>
-                  <li>Student Loan</li>
-                </ul>
-              </div>
+            <div class="other-project-bar" id="other-project-bar">
+
             </div>
           </section>
       </section>

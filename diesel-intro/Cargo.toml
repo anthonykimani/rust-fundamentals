@@ -20,4 +20,6 @@ serde_json = "1.0"
 env_logger = "0.4.2"
 log = "0.4.22"
 bcrypt = "0.15.1"
-askama = "0.12.1"
+askama = { version = "0.12", default-features = false, features = ["with-actix-web"] }
+askama_actix = "0.14.0"
+actix-cors = "0.6"
